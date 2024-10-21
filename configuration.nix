@@ -2,6 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 # sudo nixos-rebuild switch -I nixos-config=configuration.nix
+# sudo ln -s /home/johan/git/nixos-jole84/configuration.nix /etc/nixos/configuration.nix
 
 { config, pkgs, ... }:
 
