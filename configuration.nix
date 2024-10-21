@@ -119,7 +119,7 @@
     mpv
     nodejs
     paper-icon-theme
-    pkgs.distrobox
+    distrobox
     python3
     rclone
     gdalMinimal
