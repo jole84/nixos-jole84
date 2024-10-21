@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sudo nixos-rebuild switch -I nixos-config=/home/$USER/git/nixos-jole84/configuration.nix
