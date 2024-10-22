@@ -107,6 +107,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     distrobox
+    ffmpeg
     fishPlugins.done
     fishPlugins.forgit
     fishPlugins.fzf-fish
@@ -128,6 +129,7 @@
     vscode
     wget
     xdg-desktop-portal-gtk
+    yt-dlp
   ];
 
   # enable flatpak
