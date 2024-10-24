@@ -25,7 +25,7 @@
 
   # Enable automatic upgrades
   system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = true;
+  # system.autoUpgrade.allowReboot = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
