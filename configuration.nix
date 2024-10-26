@@ -117,15 +117,11 @@
     distrobox
     ffmpeg
     fishPlugins.done
-    fishPlugins.forgit
     fishPlugins.fzf-fish
-    fishPlugins.grc
-    fishPlugins.hydro
     flatpak
     fzf
     gdalMinimal
     git
-    grc
     google-chrome
     materia-kde-theme
     micro
