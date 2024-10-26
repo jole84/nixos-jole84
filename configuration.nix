@@ -17,6 +17,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
   # Kernel latest
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -122,6 +126,7 @@
     gdalMinimal
     git
     grc
+    google-chrome
     materia-kde-theme
     micro
     mpv
