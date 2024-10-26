@@ -111,24 +111,25 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable flakes
+  # nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    distrobox
     ffmpeg
     fishPlugins.done
     fishPlugins.fzf-fish
     flatpak
     fzf
-    # gdalMinimal
+    gdalMinimal
     git
     google-chrome
     materia-kde-theme
-    # materia-theme
+    materia-theme
     micro
     mpv
     nodejs
-    # paper-icon-theme
     papirus-icon-theme
     python3
     rclone
@@ -146,10 +147,10 @@
 
   users.defaultUserShell = pkgs.fish;
 
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-  };
+  # virtualisation.podman = {
+  #   enable = true;
+  #   dockerCompat = true;
+  # };
 
   boot.blacklistedKernelModules = [ "elan_i2c" ];
 
