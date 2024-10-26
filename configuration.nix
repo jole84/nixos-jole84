@@ -2,6 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 # sudo ln -sf /home/$USER/git/nixos-jole84/configuration.nix /etc/nixos/configuration.nix
+# sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 # sudo nixos-rebuild switch --upgrade
 
 { config, pkgs, ... }:
@@ -15,6 +16,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Kernel latest
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -101,7 +106,7 @@
   };
 
   # Install firefox.
-  # programs.firefox.enable = true;
+  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -112,15 +117,12 @@
     distrobox
     ffmpeg
     fishPlugins.done
-    fishPlugins.forgit
     fishPlugins.fzf-fish
-    fishPlugins.grc
-    fishPlugins.hydro
     flatpak
     fzf
     # gdalMinimal
     git
-    grc
+    google-chrome
     materia-kde-theme
     # materia-theme
     micro
