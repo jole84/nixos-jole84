@@ -2,6 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 # sudo ln -sf /home/$USER/git/nixos-jole84/configuration.nix /etc/nixos/configuration.nix
+# sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 # sudo nixos-rebuild switch --upgrade
 
 { config, pkgs, ... }:
