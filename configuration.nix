@@ -118,14 +118,16 @@
     fishPlugins.hydro
     flatpak
     fzf
-    gdalMinimal
+    # gdalMinimal
     git
     grc
     materia-kde-theme
+    # materia-theme
     micro
     mpv
     nodejs
-    paper-icon-theme
+    # paper-icon-theme
+    papirus-icon-theme
     python3
     rclone
     topgrade
