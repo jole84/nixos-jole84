@@ -32,8 +32,20 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable automatic upgrades
-  system.autoUpgrade.enable = true;
-  # system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade = {
+    enable = true;
+    persistent = true;
+    dates = "daily";
+    allowReboot = false;
+  };
+
+  # Enable automatic garbage collection
+  nix.gc = {
+    automatic = true;
+    persistent = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
 
   # Enable networking
   networking.networkmanager.enable = true;
