@@ -119,7 +119,7 @@
   };
 
   # Install firefox.
-  programs.firefox.enable = true;
+  programs.firefox.enable = false;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -135,7 +135,7 @@
     fishPlugins.fzf-fish
     flatpak
     fzf
-    gdalMinimal
+#    gdalMinimal
     git
     google-chrome
     materia-kde-theme
