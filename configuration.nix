@@ -136,6 +136,7 @@
     flatpak
     fzf
 #    gdalMinimal
+#    distrobox
     git
     google-chrome
     materia-kde-theme
