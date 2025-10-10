@@ -141,14 +141,12 @@
     google-chrome
     materia-kde-theme
     materia-theme
-    micro
     mpv
     nodejs
     papirus-icon-theme
     python3
     rclone
     topgrade
-    vscode
     wget
     xdg-desktop-portal-gtk
     yt-dlp
