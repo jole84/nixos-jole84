@@ -1,6 +1,7 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
+# nix-shell -p git
 # sudo ln -sf /home/$USER/git/nixos-jole84/configuration.nix /etc/nixos/configuration.nix
 # sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 # sudo nixos-rebuild switch --upgrade
@@ -73,7 +74,7 @@
   # services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.wayland.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
@@ -131,24 +132,23 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ffmpeg
-    fishPlugins.done
-    fishPlugins.fzf-fish
+  #  fishPlugins.done
+  #  fishPlugins.fzf-fish
     flatpak
-    fzf
 #    gdalMinimal
 #    distrobox
     git
-    google-chrome
-    materia-kde-theme
-    materia-theme
+#    google-chrome
+#    materia-kde-theme
+#    materia-theme
     mpv
     nodejs
-    papirus-icon-theme
+#    papirus-icon-theme
     python3
-    rclone
+#    rclone
     topgrade
     wget
-    xdg-desktop-portal-gtk
+#    xdg-desktop-portal-gtk
     yt-dlp
   ];
 
@@ -191,6 +191,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 
 }
