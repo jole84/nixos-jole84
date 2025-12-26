@@ -160,6 +160,9 @@
 
   users.defaultUserShell = pkgs.fish;
 
+  # virtualisation.virtualbox.host.enable = true
+  # virtualisation.virtualbox.host.enableExtensionPack = true
+
   # virtualisation.podman = {
   #   enable = true;
   #   dockerCompat = true;
