@@ -147,11 +147,10 @@
     python3
 #    rclone
     topgrade
+    vscodium
     wget
 #    xdg-desktop-portal-gtk
     yt-dlp
-    python313Packages.requests
-    python313Packages.geopandas
   ];
 
   # enable flatpak
