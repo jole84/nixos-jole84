@@ -150,6 +150,10 @@
     wget
 #    xdg-desktop-portal-gtk
     yt-dlp
+    (python3.withPackages (python-pkgs: with python-pkgs; [
+      geopandas
+      requests
+    ]))
   ];
 
   # enable flatpak
