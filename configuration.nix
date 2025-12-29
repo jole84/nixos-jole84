@@ -12,6 +12,7 @@
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
+      ./localapps.nix
     ];
 
   # Bootloader.
@@ -132,24 +133,22 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ffmpeg
-  #  fishPlugins.done
-  #  fishPlugins.fzf-fish
     flatpak
-#    gdalMinimal
-#    distrobox
+    # gdalMinimal
+    # distrobox
     git
-#    google-chrome
-#    materia-kde-theme
-#    materia-theme
+    # google-chrome
+    # materia-kde-theme
+    # materia-theme
     mpv
     nodejs
-#    papirus-icon-theme
+    # papirus-icon-theme
     python3
-#    rclone
+    # rclone
     topgrade
     vscodium
     wget
-#    xdg-desktop-portal-gtk
+    # xdg-desktop-portal-gtk
     yt-dlp
   ];
 
