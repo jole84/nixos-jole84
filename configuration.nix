@@ -134,22 +134,12 @@
   environment.systemPackages = with pkgs; [
     ffmpeg
     flatpak
-    # gdalMinimal
-    # distrobox
     git
-    # google-chrome
-    # materia-kde-theme
-    # materia-theme
     mpv
-    nodejs
-    # papirus-icon-theme
     python3
-    # rclone
     topgrade
     vscodium
     wget
-    # xdg-desktop-portal-gtk
-    yt-dlp
   ];
 
   # enable flatpak
@@ -162,12 +152,12 @@
   # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.host.enableExtensionPack = true;
 
-  # virtualisation.podman = {
-  #   enable = true;
-  #   dockerCompat = true;
-  # };
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
 
-  boot.blacklistedKernelModules = [ "elan_i2c" ];
+#   boot.blacklistedKernelModules = [ "elan_i2c" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -180,7 +170,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services.openssh.enable = false;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -194,6 +184,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "26.05"; # Did you read the comment?
 
 }
