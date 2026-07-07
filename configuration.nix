@@ -133,7 +133,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ffmpeg
-    flatpak
     git
     mpv
     python3
