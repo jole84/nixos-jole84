@@ -143,6 +143,7 @@
   ];
 
   # enable flatpak
+  # flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
   services.flatpak.enable = true;
 
   programs.fish.enable = true;
@@ -150,14 +151,14 @@
   users.defaultUserShell = pkgs.fish;
 
   # virtualisation.virtualbox.host.enable = true;
-  # virtualisation.virtualbox.host.enableExtensionPack = true;
+  # virtualisation.virtualbox.host.enableExtensionPack = true; # Warning: Host extensions cause frequent recompilation.
 
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;
   };
 
-#   boot.blacklistedKernelModules = [ "elan_i2c" ];
+  # boot.blacklistedKernelModules = [ "elan_i2c" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
