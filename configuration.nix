@@ -134,7 +134,7 @@
   environment.systemPackages = with pkgs; [
     ffmpeg
     git
-    # mpv
+    mpv
     python3
     topgrade
     toolbox
