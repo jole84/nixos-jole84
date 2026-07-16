@@ -78,6 +78,7 @@
   # services.displayManager.sddm.wayland.enable = true;
   services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
+  qt.style = "kvantum";
 
   # Enable the COSMIC desktop environment
   # services.displayManager.cosmic-greeter.enable = true;
