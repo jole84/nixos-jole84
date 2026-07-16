@@ -20,5 +20,6 @@ pkgs.mkShellNoCC {
   shellHook =
     ''
       echo "nix-shell started!"
+      exec fish
     '';
 }
