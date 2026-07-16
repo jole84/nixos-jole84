@@ -3,6 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 # nix-shell -p git
 # sudo ln -sf /home/$USER/git/nixos-jole84/configuration.nix /etc/nixos/configuration.nix
+# cp localapps.nix ~/
 # sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 # sudo nixos-rebuild switch --upgrade
 
@@ -12,7 +13,7 @@
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
-      # ./localapps.nix
+      /home/johan/localapps.nix
     ];
 
   # Bootloader.
