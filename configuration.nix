@@ -120,7 +120,7 @@
   users.users.johan = {
     isNormalUser = true;
     description = "Johan";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
     packages = with pkgs; [
       # kdePackages.kate
     ];
@@ -155,6 +155,8 @@
   programs.fish.enable = true;
 
   users.defaultUserShell = pkgs.fish;
+
+  # virtualisation.virtualbox.guest.enable = true;
 
   # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.host.enableExtensionPack = true; # Warning: Host extensions cause frequent recompilation.
