@@ -167,6 +167,7 @@
     enable = true;
     qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
   };
+  # virsh net-autostart default
 
   # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.host.enableExtensionPack = true; # Warning: Host extensions cause frequent recompilation.
