@@ -162,7 +162,6 @@
   users.defaultUserShell = pkgs.fish;
 
   # Enable virtualisation
-  virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
   virtualisation.libvirtd = {
     enable = true;
