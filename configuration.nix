@@ -120,7 +120,12 @@
   users.users.johan = {
     isNormalUser = true;
     description = "Johan";
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "vboxusers"
+      "libvirtd"
+    ];
     packages = with pkgs; [
       # kdePackages.kate
     ];
@@ -138,6 +143,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    dnsmasq # default libvirt network
     ffmpeg
     git
     mpv
@@ -153,13 +159,23 @@
   services.flatpak.enable = true;
 
   programs.fish.enable = true;
-
   users.defaultUserShell = pkgs.fish;
 
-  # virtualisation.virtualbox.guest.enable = true;
+  # Enable virtualisation
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+  };
 
   # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.host.enableExtensionPack = true; # Warning: Host extensions cause frequent recompilation.
+
+  # virtualisation guest
+  # services.qemuGuest.enable = true;
+  # services.spice-vdagentd.enable = true;  # enable copy and paste between host and guest
+  # virtualisation.virtualbox.guest.enable = true;
 
   virtualisation.podman = {
     enable = true;
