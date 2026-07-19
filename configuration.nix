@@ -158,7 +158,7 @@
     mpv
     python3
     topgrade
-    toolbox
+    distrobox
     wget
   ];
 
