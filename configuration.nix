@@ -159,7 +159,6 @@
     python3
     topgrade
     toolbox
-    vscodium
     wget
   ];
 
