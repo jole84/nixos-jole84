@@ -94,6 +94,10 @@
   # services.displayManager.cosmic-greeter.enable = true;
   # services.desktopManager.cosmic.enable = true;
 
+  # Enable Cinnamon desktop
+  # services.xserver.desktopManager.cinnamon.enable = true;
+  # services.xserver.displayManager.lightdm.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "se";
