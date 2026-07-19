@@ -14,5 +14,6 @@
     # toolbox
     # xdg-desktop-portal-gtk
     # yt-dlp
+    # vscodium
     ];
 }
